@@ -45,15 +45,15 @@ def main():
     os.system('cls' if os.name == 'nt' else 'clear')
     print("=== DOHODA O VINE A TRESTU ===\n")
 
-    name_p = input("Zadejte jméno pachatele: ").strip()
-    dob = input("Zadejte datum narození pachatele (DD/MM/YYYY): ").strip()
-    signature = input("Zadejte podpis příslušníka: ").strip()
+    name_p = input("Zadejte celé meno pachatela: ").strip()
+    dob = input("Zadejte datum narodenia pachatela (DD/MM/YYYY): ").strip()
+    signature = input("Zadejte podpis officera: ").strip()
     jail_signature = name_p.split()[-1] if name_p else ""
 
     selected = []
 
     print("\n--- Vyhladavanie trestov ---")
-    print("Prikazy: [text] Enter = vyhladat | 'del' = mazat | 'koniec' = dokoncit\n")
+    print("Prikazy: [text] Enter = vyhladat | 'del' = zmazat | 'koniec' = dokoncit\n")
 
     while True:
         if selected:
@@ -228,15 +228,15 @@ def main():
     fines_str = str(final_fine)
 
     result = (
-        f"Dohoda o vině a trestu | "
-        f"Jméno: {name_p} | "
+        f"Dohoda o vine a treste | "
+        f"Meno: {name_p} | "
         f"DOB: {dob} | "
-        f"Důvod: {reasons_str} | "
-        f"Trest: {sentence_str} měsíců jail | "
+        f"Dôvod: {reasons_str} | "
+        f"Trest: {sentence_str} mesiacov v jaili | "
         f"Pokuty/a: ${fines_str} | "
-        f"Vězení: Boilingbroke Penitentiary | "
-        f"Podpis Příslušníka: {signature} | "
-        f"Podpis pachatele: {jail_signature}"
+        f"Vezenie: Boilingbroke Penitentiary | "
+        f"Podpis Officera: {signature} | "
+        f"Podpis pachatela: {jail_signature}"
     )
 
     print("\n" + "="*80)
